@@ -1,0 +1,13 @@
+{
+    "name": "paul/mcrsf.xk7.net",
+    "description": "MCRSF books website",
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Paul Waring",
+            "email": "paul@xk7.net"
+        }
+    ],
+    "require": {}
+}

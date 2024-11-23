@@ -1,2 +1,4 @@
 deploy.sh
 htdocs/books.db
+
+/vendor/
