@@ -9,5 +9,12 @@
             "email": "paul@xk7.net"
         }
     ],
-    "require": {}
+    "config": {
+        "platform": {
+            "php": "8.3"
+        }
+    },
+    "require": {
+        "phpoffice/phpspreadsheet": "^3.5"
+    }
 }
