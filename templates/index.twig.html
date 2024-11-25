@@ -11,14 +11,13 @@
     <header>
       <h1>MCRSF books</h1>
       <nav>
-        <a href="?section=upcoming">Upcoming</a>
-        <a href="?section=read">Read</a>
-        <a href="?section=suggestions">Suggestions</a>
-        <a href="?section=rejected">Rejected</a>
+        {% for availableSection in availableSections %}
+          <a href="?section={{ availableSection }}" {{ section == availableSection ? 'class="current"' : '' }}>{{ availableSection|title }}</a>
+        {% endfor %}
       </nav>
     </header>
     <main>
-      <h2>{{ section }}</h2>
+      <h2>{{ section|title }}</h2>
       <table>
         <thead>
           <tr>

@@ -17,7 +17,18 @@ $options = [
 ];
 $db = new PDO($dsn, null, null, $options);
 
+$availableSections = [
+    'upcoming',
+    'read',
+    'suggestions',
+    'rejected',
+];
+
 $section = $_GET['section'] ?? 'upcoming';
+
+if (!in_array($section, $availableSections, true)) {
+    $section = 'upcoming';
+}
 
 $sql = 'SELECT * FROM books WHERE section = :section';
 $sth = $db->prepare($sql);
@@ -37,6 +48,7 @@ $twig->display(
     'index.twig.html',
     [
         'books' => $books,
-        'section' => ucwords($section),
+        'availableSections' => $availableSections,
+        'section' => $section,
     ]
 );
