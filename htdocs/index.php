@@ -37,5 +37,6 @@ $twig->display(
     'index.twig.html',
     [
         'books' => $books,
+        'section' => ucwords($section),
     ]
 );
